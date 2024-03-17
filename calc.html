@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <script>
+        let a;
+        let b;
+        let char;
+        let result;
+        let killswitch = 'y'; // Initialize to 'y' to enter the loop initially
+
+        while (killswitch !== 'n') {
+            console.log('Enter first number');
+            a = parseFloat(window.prompt('Enter first number'));
+            console.log('Enter second number');
+            b = parseFloat(window.prompt('Enter second number'));
+            console.log('Enter operation(+ - * /)');
+            char = window.prompt('Enter operation(+ - * /)');
+
+            switch (char) {
+                case '+':
+                    result = `Sum: ${a + b}`;
+                    break;
+                case '-':
+                    result = `Difference: ${a - b}`;
+                    break;
+                case '*':
+                    result = `Product: ${a * b}`;
+                    break;
+                case '/':
+                    result = `Division: ${a / b}`;
+                    break;
+                default:
+                    result = 'Invalid operation';
+            }
+            
+            window.alert(result);
+            console.log('Would you like to proceed?(y/n)');
+            killswitch = window.prompt('Would you like to proceed?(y/n)');
+        }
+    </script>
+</body>
+</html>
